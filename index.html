@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>eDoc Helper — ติดตั้งและนโยบายความเป็นส่วนตัว</title>
+<meta name="description" content="eDoc Helper: ผู้ช่วยอ่านอย่างเดียวสำหรับ CMU e-Document v3 — วิธีติดตั้ง และนโยบายความเป็นส่วนตัว">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#111827;--muted:#4b5563;--line:#e5e7eb;--brand:#173e94;--bg:#f8fafc;--card:#fff}
+@media (prefers-color-scheme:dark){:root{--ink:#f3f4f6;--muted:#9ca3af;--line:#374151;--brand:#93b4ff;--bg:#0b1220;--card:#111827}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 Sarabun,system-ui,sans-serif}
+main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
+h1{font-size:30px;margin:0 0 4px}h2{font-size:21px;margin:40px 0 8px}h3{font-size:17px;margin:20px 0 4px}
+.lead{color:var(--muted);margin:0 0 24px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
+.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:10px}
+@media (prefers-color-scheme:dark){.btn{color:#0b1220}}
+ol,ul{padding-left:22px}li{margin:4px 0}
+.muted{color:var(--muted);font-size:14px}
+nav a{color:var(--brand);margin-right:16px}
+</style>
+</head>
+<body>
+<main>
+  <h1>eDoc Helper</h1>
+  <p class="lead">ผู้ช่วยอ่านอย่างเดียวสำหรับ CMU e-Document v3 — ค้นหา กรอง จัดแฟ้ม และติดตามหนังสือเข้าได้เร็วขึ้น ข้อมูลอยู่ในเครื่องของคุณ</p>
+  <nav><a href="#install">ติดตั้ง</a><a href="#move">ย้ายจากรุ่นทดสอบ</a><a href="#privacy">ความเป็นส่วนตัว</a></nav>
+
+  <h2 id="install">ติดตั้ง</h2>
+  <div class="card">
+    <p><a class="btn" id="store" href="#">ติดตั้งจาก Chrome Web Store</a></p>
+    <ol>
+      <li>เปิดลิงก์ด้านบนใน Google Chrome หรือ Microsoft Edge แล้วกด <b>เพิ่มลงใน Chrome</b> (Edge: กด <b>อนุญาตส่วนขยายจากร้านค้าอื่น</b> ก่อนหนึ่งครั้ง)</li>
+      <li>เปิด <a href="https://edoc.cmu.ac.th/v3">eDoc</a> และเข้าสู่ระบบตามปกติ — ตัวช่วยจะแสดงในหน้าหนังสือเข้า และพาตั้งค่าเริ่มต้นสั้น ๆ</li>
+    </ol>
+    <p class="muted">รุ่นใหม่อัปเดตให้อัตโนมัติ ไม่ต้องทำอะไร</p>
+  </div>
+
+  <h2 id="move">ย้ายจากรุ่นทดสอบ (Load unpacked)</h2>
+  <div class="card">
+    <ol>
+      <li>ในรุ่นเดิม: กดไอคอน eDoc Helper → ⚙ → <b>สำรองแฟ้ม สถานะ และบันทึก</b> → <b>ส่งออก</b> (ได้ไฟล์ .json)</li>
+      <li>ลบรุ่นเดิมที่ chrome://extensions</li>
+      <li>ติดตั้งจากลิงก์ด้านบน แล้วกด ⚙ → <b>นำเข้า</b> ไฟล์ .json นั้น</li>
+    </ol>
+    <p class="muted">รุ่นจาก Web Store เป็นส่วนขยายคนละตัวกับรุ่นทดสอบ ข้อมูลในเครื่องจึงไม่ย้ายตามเอง</p>
+  </div>
+
+  <h2 id="privacy">นโยบายความเป็นส่วนตัว</h2>
+  <div class="card">
+    <h3>ส่วนขยายทำอะไร</h3>
+    <p>eDoc Helper อ่านหนังสือในกล่อง eDoc ของคุณ (edoc.cmu.ac.th) โดยใช้การเข้าสู่ระบบ eDoc ของคุณเอง เพื่อแสดง ค้นหา กรอง และจัดระเบียบให้ใช้งานง่ายขึ้น <b>อ่านอย่างเดียว</b> — ไม่แก้ไข ไม่ส่ง และไม่กดปุ่มใด ๆ ใน eDoc แทนคุณ</p>
+    <h3>ข้อมูลที่ใช้ และเก็บที่ไหน</h3>
+    <ul>
+      <li><b>รายการและรายละเอียดหนังสือของคุณ</b> จาก eDoc — เก็บสำเนาไว้ในเบราว์เซอร์ของคุณ (IndexedDB) เพื่อแสดงได้ทันที แยกตามผู้ใช้ eDoc</li>
+      <li><b>สถานะ แฟ้ม บันทึก และการตั้งค่าของคุณ</b> — เก็บในเบราว์เซอร์ของคุณเท่านั้น</li>
+      <li><b>การเข้าสู่ระบบ eDoc</b> — ใช้จากคำขอของหน้า eDoc เอง เก็บไว้ในหน่วยความจำขณะใช้งานเท่านั้น ไม่บันทึกลงเครื่อง</li>
+    </ul>
+    <h3>ข้อมูลไปที่ไหน</h3>
+    <p>ไม่มีเซิร์ฟเวอร์ของส่วนขยาย ข้อมูลไม่ถูกส่งไปที่ใดนอกจากระบบของ eDoc เอง (edoc.cmu.ac.th, api.cmu.ac.th และที่เก็บไฟล์แนบของ eDoc) ไม่มีการขาย แบ่งปัน วิเคราะห์ หรือติดตามการใช้งาน</p>
+    <h3>ลบข้อมูล</h3>
+    <p>กด ⚙ ในแผงด้านข้าง → <b>ล้างข้อมูล</b> หรือลบส่วนขยายออก — ข้อมูลทั้งหมดในเครื่องจะถูกลบ</p>
+    <h3>ใช้เครื่องร่วมกัน</h3>
+    <p>ข้อมูลแยกตามผู้ใช้ eDoc แต่ไม่ได้เข้ารหัส ควรใช้ Chrome profile หรือบัญชี Windows แยกต่อคน</p>
+    <p class="muted">ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC · ปรับปรุงล่าสุด 15 ตุลาคม 2569</p>
+  </div>
+</main>
+</body>
+</html>
