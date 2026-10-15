@@ -162,3 +162,17 @@ table.perm td:first-child{white-space:nowrap;font-weight:600;color:var(--ink)}
   .rv{opacity:1;transform:none;transition:none}
   .feature .pic:hover{transform:none}
 }
+
+/* the tour video and its chapters */
+.tour{display:grid;grid-template-columns:minmax(0,1fr) 270px;gap:20px;align-items:start}
+.tour-player{border-radius:14px;overflow:hidden;border:1px solid var(--line);box-shadow:0 30px 60px -30px #0f172a55;background:#000}
+.tour-player video{width:100%;height:auto;display:block;aspect-ratio:16/9}
+.tour-ch{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:4px}
+.tour-ch button{width:100%;display:flex;gap:12px;align-items:baseline;text-align:left;font:inherit;font-size:15px;color:var(--text);background:none;border:0;border-radius:9px;padding:8px 12px;cursor:pointer;transition:background .2s,color .2s}
+.tour-ch button:hover{background:var(--soft)}
+.tour-ch button.on{background:var(--brand-soft);color:var(--brand);font-weight:600}
+.tour-ch .ct{font:600 13px/1.6 ui-monospace,Menlo,monospace;color:var(--muted);min-width:34px}
+.tour-ch button.on .ct{color:var(--brand)}
+.tour-note{text-align:center;font-size:13px;color:var(--muted);margin:14px 0 0}
+@media (max-width:900px){.tour{grid-template-columns:1fr}.tour-ch{display:grid;grid-template-columns:1fr 1fr}}
+@media (max-width:480px){.tour-ch{grid-template-columns:1fr}}

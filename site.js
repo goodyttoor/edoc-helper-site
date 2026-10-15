@@ -3,7 +3,7 @@
 // reduced motion; otherwise everything is simply there.
 (() => {
   if (matchMedia('(prefers-reduced-motion: reduce)').matches) return
-  const groups = ['.pillars .pillar', '.sec-h', '.feature', '.grid3 .mini', '.steps .step', '.trust .mini', 'details.qa', '.cta-band .wrap > *', '.doc section', '.doc figure']
+  const groups = ['.pillars .pillar', '.sec-h', '.tour', '.feature', '.grid3 .mini', '.steps .step', '.trust .mini', 'details.qa', '.cta-band .wrap > *', '.doc section', '.doc figure']
   let pending = []
   for (const sel of groups) {
     document.querySelectorAll(sel).forEach((el, i) => {
