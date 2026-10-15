@@ -137,3 +137,28 @@ table.perm td:first-child{white-space:nowrap;font-weight:600;color:var(--ink)}
   .side a.on{border-color:var(--brand)}
   .doc{padding-top:12px}
 }
+
+/* motion — calm and short; nothing moves for people who ask for less motion */
+@view-transition{navigation:auto}
+.top{view-transition-name:top}
+::view-transition-old(root){animation:vt-out .22s ease-in both}
+::view-transition-new(root){animation:vt-in .38s cubic-bezier(.2,.7,.2,1) both}
+@keyframes vt-out{to{opacity:0;transform:translateY(-6px)}}
+@keyframes vt-in{from{opacity:0;transform:translateY(10px)}}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}}
+.hero>*{animation:rise .7s cubic-bezier(.2,.7,.2,1) both}
+.hero>:nth-child(2){animation-delay:.06s}.hero>:nth-child(3){animation-delay:.12s}.hero>:nth-child(4){animation-delay:.18s}
+.hero>:nth-child(5){animation-delay:.22s}.hero>.frame{animation-delay:.3s;animation-duration:.9s}
+.doc>h1,.doc>.lead{animation:rise .6s cubic-bezier(.2,.7,.2,1) both}.doc>.lead{animation-delay:.06s}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1);transition-delay:var(--d,0s)}
+.rv.in{opacity:1;transform:none}
+.feature .pic,.frame{transition:transform .4s ease,box-shadow .4s ease}
+.feature .pic:hover{transform:translateY(-3px);box-shadow:0 28px 50px -26px #0f172a55}
+.btn{transition:filter .2s,transform .2s}.btn:active{transform:translateY(1px)}
+.side a{transition:background .2s,color .2s,border-color .2s}
+@media (prefers-reduced-motion:reduce){
+  @view-transition{navigation:none}
+  .hero>*,.doc>h1,.doc>.lead{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+  .feature .pic:hover{transform:none}
+}
