@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ความเป็นส่วนตัว — eDoc Helper</title>
+<meta name="description" content="นโยบายความเป็นส่วนตัวและคำอธิบายสิทธิ์ของ eDoc Helper">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/icon.svg" alt="">eDoc Helper</a>
+  <nav class="menu"><a href="index.html#features">ฟีเจอร์</a><a href="docs.html">คู่มือ</a><a href="privacy.html" aria-current="page">ความเป็นส่วนตัว</a><a href="index.html#faq">คำถามพบบ่อย</a></nav>
+  <a class="btn sm" href="index.html#install">ติดตั้ง</a>
+</div></header>
+
+<div class="wrap docs">
+  <nav class="side" aria-label="สารบัญ">
+    <div class="grp">ความเป็นส่วนตัว</div>
+    <a href="#short">สรุปสั้น</a>
+    <a href="#data">ข้อมูลที่ใช้</a>
+    <a href="#where">เก็บที่ไหน นานเท่าไร</a>
+    <a href="#never">สิ่งที่ไม่ทำ</a>
+    <a href="#perms">สิทธิ์ที่ขอ</a>
+    <a href="#control">การควบคุมของคุณ</a>
+    <a href="#contact">ติดต่อ</a>
+  </nav>
+
+  <article class="doc">
+    <h1>ความเป็นส่วนตัวและความปลอดภัย</h1>
+    <p class="lead">ปรับปรุงล่าสุด 15 ตุลาคม 2569</p>
+
+    <section id="short">
+      <h2>สรุปสั้น</h2>
+      <ul>
+        <li>eDoc Helper <b>อ่านอย่างเดียว</b> — ไม่แก้ไข ไม่ส่ง ไม่อนุมัติ และไม่กดปุ่มใด ๆ ใน eDoc แทนคุณ</li>
+        <li><b>ไม่มีเซิร์ฟเวอร์ของส่วนขยาย</b> — ข้อมูลไม่ถูกส่งให้ผู้พัฒนาหรือบุคคลที่สาม</li>
+        <li>ข้อมูลทั้งหมด <b>อยู่ในเบราว์เซอร์ของคุณ</b> แยกตามผู้ใช้ eDoc</li>
+        <li>ไม่มีโฆษณา ไม่มีการติดตามการใช้งาน ไม่มีโค้ดที่โหลดจากภายนอก</li>
+      </ul>
+    </section>
+
+    <section id="data">
+      <h2>ข้อมูลที่ใช้</h2>
+      <h3>การเข้าสู่ระบบ eDoc</h3>
+      <p>ตัวช่วยใช้การเข้าสู่ระบบที่หน้า eDoc ใช้อยู่แล้ว เพื่ออ่านกล่องหนังสือของคุณในนามคุณ เก็บไว้ในหน่วยความจำระหว่างใช้งานเท่านั้น ไม่บันทึกลงเครื่อง และไม่ส่งไปที่ใดนอกจาก eDoc</p>
+      <h3>เนื้อหาใน eDoc ของคุณ</h3>
+      <p>รายการหนังสือ รายละเอียด และเส้นทางเอกสาร ที่ eDoc แสดงให้คุณอยู่แล้ว ตัวช่วยเก็บสำเนาไว้ในเครื่องเพื่อแสดงทันทีและค้นหาได้</p>
+      <h3>สิ่งที่คุณสร้างเอง</h3>
+      <p>สถานะ แฟ้ม บันทึก เรื่องที่พักไว้ และการตั้งค่า</p>
+    </section>
+
+    <section id="where">
+      <h2>เก็บที่ไหน นานเท่าไร</h2>
+      <p>ในพื้นที่เก็บข้อมูลของส่วนขยายบนเบราว์เซอร์นี้ (chrome.storage และ IndexedDB) แยกตามผู้ใช้ eDoc ข้อมูลไม่ได้เข้ารหัสบนเครื่อง — ถ้าใช้เครื่องร่วมกัน ควรใช้ Chrome profile แยกต่อคน</p>
+      <p>สำเนาหนังสือของผู้ที่ไม่ได้เข้าใช้นานเกินจำนวนวันที่กำหนดในตั้งค่าถูกลบเอง ข้อมูลทั้งหมดหายไปเมื่อลบส่วนขยาย</p>
+    </section>
+
+    <section id="never">
+      <h2>สิ่งที่ไม่ทำ</h2>
+      <ul>
+        <li>ไม่ขาย ไม่แบ่งปัน และไม่ส่งข้อมูลไปให้ใคร</li>
+        <li>ไม่ใช้คำสั่งเขียนของ eDoc — ใช้เฉพาะคำสั่งอ่านที่กำหนดไว้ 10 ชุด</li>
+        <li>ไม่เปลี่ยนหรือบล็อกคำขอของหน้า eDoc — ยกเว้นเมื่อเปิดตัวช่วยอยู่ จะขอหนังสือเข้าจาก eDoc เฉพาะช่วงตั้งแต่ครั้งล่าสุด เพื่อให้หน้าโหลดเร็วขึ้น (ปิดตัวช่วยแล้วกลับเป็นคำขอเดิม)</li>
+        <li>ไม่แสดงชื่อเรื่องในการแจ้งเตือน — บอกแค่จำนวน</li>
+        <li>ไม่ใช้ข้อมูลเพื่อวัตถุประสงค์อื่นนอกจากช่วยคุณใช้ eDoc</li>
+      </ul>
+    </section>
+
+    <section id="perms">
+      <h2>สิทธิ์ที่ขอ และเหตุผล</h2>
+      <table class="perm">
+        <tr><th>สิทธิ์</th><th>ใช้ทำอะไร</th></tr>
+        <tr><td>storage</td><td>เก็บการตั้งค่า สถานะ แฟ้ม และบันทึกของคุณในเครื่อง</td></tr>
+        <tr><td>unlimitedStorage</td><td>เก็บสำเนากล่องหนังสือในเครื่อง กล่องที่มีหนังสือมากอาจเกินพื้นที่ปกติ</td></tr>
+        <tr><td>alarms</td><td>อัปเดตสำเนากล่องหนังสือจาก eDoc ทุกไม่กี่นาที</td></tr>
+        <tr><td>sidePanel</td><td>แผงด้านข้าง: ค้นหา เรื่องที่คุณเสนอ และตั้งค่า</td></tr>
+        <tr><td>webRequest</td><td>อ่าน (ไม่บล็อก ไม่แก้) ส่วนหัวของคำขอที่หน้า eDoc ส่งไป api.cmu.ac.th เพื่อใช้การเข้าสู่ระบบเดียวกันอ่านข้อมูล เก็บในหน่วยความจำเท่านั้น</td></tr>
+        <tr><td>offscreen</td><td>แปลงหน้ากล่องหนังสือ eDoc v2 เมื่อคุณเปิด “รวม eDoc v2”</td></tr>
+        <tr><td>notifications</td><td>แจ้งเตือนหนังสือเข้าใหม่ (ปิดไว้เป็นค่าเริ่มต้น บอกแค่จำนวน)</td></tr>
+        <tr><td>edoc.cmu.ac.th</td><td>แสดงตัวช่วยบนหน้า eDoc และอ่านกล่อง eDoc v2 เมื่อเปิดใช้</td></tr>
+        <tr><td>api.cmu.ac.th</td><td>คำสั่งอ่านของ eDoc v3 (ไม่มีคำสั่งเขียน)</td></tr>
+        <tr><td>ที่เก็บไฟล์แนบของ eDoc</td><td>เปิด พิมพ์ และรวมไฟล์แนบเป็น zip เมื่อคุณกด</td></tr>
+      </table>
+    </section>
+
+    <section id="control">
+      <h2>การควบคุมของคุณ</h2>
+      <ul>
+        <li>ปิดตัวช่วยชั่วคราว: สวิตช์ eDoc Helper มุมบนซ้ายของกล่องหนังสือ</li>
+        <li>ส่งออก ล้างแคช หรือลบแฟ้มและสถานะ: แผงด้านข้าง → ตั้งค่า</li>
+        <li>ลบทุกอย่าง: ลบส่วนขยายออกจากเบราว์เซอร์</li>
+      </ul>
+    </section>
+
+    <section id="contact">
+      <h2>ติดต่อ</h2>
+      <p>eDoc Helper ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC มีคำถามเรื่องความเป็นส่วนตัว ติดต่อผู้พัฒนาผ่านหน้าส่วนขยายใน Chrome Web Store</p>
+    </section>
+  </article>
+</div>
+
+<footer><div class="wrap">
+  <span>eDoc Helper</span><a href="index.html">หน้าแรก</a><a href="docs.html">คู่มือ</a>
+  <span class="sp"></span><span>ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC</span>
+</div></footer>
+</body>
+</html>

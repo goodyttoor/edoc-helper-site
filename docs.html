@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>คู่มือ — eDoc Helper</title>
+<meta name="description" content="คู่มือการใช้ eDoc Helper: ติดตั้ง หนังสือเข้า ค้นหา ตัวกรอง สถานะ แฟ้ม แป้นลัด และวิธีแก้ปัญหา">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="img/icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/icon.svg" alt="">eDoc Helper</a>
+  <nav class="menu"><a href="index.html#features">ฟีเจอร์</a><a href="docs.html" aria-current="page">คู่มือ</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="index.html#faq">คำถามพบบ่อย</a></nav>
+  <a class="btn sm" href="index.html#install">ติดตั้ง</a>
+</div></header>
+
+<div class="wrap docs">
+  <nav class="side" aria-label="สารบัญ">
+    <input class="search" type="search" placeholder="ค้นหาในคู่มือ…" aria-label="ค้นหาในคู่มือ">
+    <div class="grp">เริ่มต้น</div>
+    <a href="#install">ติดตั้ง</a>
+    <a href="#move">ย้ายจากรุ่นทดสอบ</a>
+    <a href="#first">ครั้งแรกที่ใช้</a>
+    <div class="grp">ใช้งาน</div>
+    <a href="#inbox">หนังสือเข้า</a>
+    <a href="#read">การอ่าน</a>
+    <a href="#search">ค้นหาและ Ctrl+K</a>
+    <a href="#filters">ตัวกรองและมุมมอง</a>
+    <a href="#organise">สถานะ แฟ้ม บันทึก พักไว้</a>
+    <a href="#more">พิมพ์ ไฟล์แนบ และอื่น ๆ</a>
+    <a href="#keys">แป้นลัด</a>
+    <div class="grp">ช่วยเหลือ</div>
+    <a href="#fix">วิธีแก้ที่พบบ่อย</a>
+    <a href="#backup">สำรองและลบข้อมูล</a>
+    <a href="#changes">อัปเดต</a>
+  </nav>
+
+  <article class="doc">
+    <h1>คู่มือ eDoc Helper</h1>
+    <p class="lead">ทุกอย่างที่ต้องรู้ อ่านจบในสิบนาที — หรือกดไปที่หัวข้อที่ต้องการ</p>
+
+    <section id="install">
+      <h2>ติดตั้ง</h2>
+      <h3>Google Chrome</h3>
+      <ol><li>เปิดหน้า eDoc Helper ใน Chrome Web Store (ลิงก์จากปุ่ม <b>ติดตั้ง</b> ด้านบน)</li><li>กด <b>เพิ่มใน Chrome</b> แล้วกด <b>เพิ่มส่วนขยาย</b></li><li>กดไอคอนจิ๊กซอว์ แล้วปักหมุด eDoc Helper ไว้ที่แถบเครื่องมือ (ไม่บังคับ)</li></ol>
+      <h3>Microsoft Edge</h3>
+      <ol><li>เปิดลิงก์เดียวกันใน Edge — ด้านบนจะมีแถบให้กด <b>อนุญาตส่วนขยายจากร้านค้าอื่น</b> กดหนึ่งครั้ง</li><li>กด <b>เพิ่มใน Chrome</b> (ชื่อปุ่มเป็นของร้าน ใช้กับ Edge ได้)</li></ol>
+      <div class="callout">อัปเดตเป็นไปเองโดยเบราว์เซอร์ ไม่ต้องทำอะไร</div>
+    </section>
+
+    <section id="move">
+      <h2>ย้ายจากรุ่นทดสอบ (โหลดแบบ unpacked)</h2>
+      <p>รุ่นจาก Chrome Web Store เป็นส่วนขยายคนละตัวกับรุ่นทดสอบ ข้อมูลในเครื่องจึงไม่ย้ายตามเอง ทำตามนี้เพื่อเก็บสถานะ แฟ้ม และบันทึกไว้:</p>
+      <ol><li>ในรุ่นทดสอบ: เปิดแผงด้านข้าง → <b>ตั้งค่า</b> → <b>สำรองแฟ้ม สถานะ และบันทึก</b> → <b>ส่งออก (JSON)</b></li><li>ลบรุ่นทดสอบที่ <code>chrome://extensions</code></li><li>ติดตั้งจาก Chrome Web Store</li><li>ในรุ่นใหม่: แผงด้านข้าง → <b>ตั้งค่า</b> → <b>นำเข้า</b> แล้วเลือกไฟล์ที่ส่งออกไว้</li></ol>
+      <div class="callout warn">อย่าเปิดสองรุ่นพร้อมกัน — ทั้งสองจะวาดบนหน้า eDoc ซ้อนกัน</div>
+    </section>
+
+    <section id="first">
+      <h2>ครั้งแรกที่ใช้</h2>
+      <p>เข้า eDoc ตามปกติ เมื่อถึงหน้าหนังสือเข้า ตัวช่วยจะถามการตั้งค่า 4 ขั้น แต่ละตัวเลือกมีภาพประกอบ: มุมมอง (รายการ / บอร์ด / แบบละเอียด) ความหนาแน่น การแจ้งเตือน และการรวม eDoc v2 จากนั้นมีทัวร์ 1 นาทีที่ชี้ส่วนต่าง ๆ บนหน้าจริงของคุณ</p>
+      <figure><img src="img/4-setup.png" alt="ขั้นตั้งค่าเริ่มต้น" loading="lazy"><figcaption>เปลี่ยนภายหลังได้ที่ ⋯ → ทัวร์และตั้งค่าเริ่มต้น</figcaption></figure>
+      <p>ครั้งแรกตัวช่วยดึงหนังสือย้อนหลังจาก eDoc เป็นช่วง ๆ ทีละ 7 วัน อาจใช้เวลาสักครู่ หลังจากนั้นจะดึงเฉพาะเรื่องใหม่</p>
+    </section>
+
+    <section id="inbox">
+      <h2>หนังสือเข้า</h2>
+      <p>แท็บ <b>พิจารณา</b> <b>ส่งต่อ</b> และ <b>ทั้งหมด</b> บอกจำนวนเรื่องในแต่ละกลุ่ม ป้ายสีบอกความด่วน และจำนวนวันที่เรื่องรออยู่ คลิกเรื่องเพื่อดูรายละเอียดและเส้นทางเอกสารในช่องทางขวา</p>
+      <figure><img src="img/1-list.png" alt="รายการหนังสือเข้า" loading="lazy"><figcaption>ตัวอย่างนี้ใช้ข้อมูลสมมติ</figcaption></figure>
+      <p>รายการแสดงจากข้อมูลในเครื่องทันที แล้วตัวช่วยถาม eDoc เฉพาะเรื่องที่มาใหม่ตั้งแต่ครั้งล่าสุด มุมบนบอกเวลาอัปเดตล่าสุด ถ้า eDoc ช้าหรือปิดปรับปรุง รายการเดิมยังใช้ได้</p>
+      <p>ต้องการหน้า eDoc เดิม? กดสวิตช์ <b>eDoc Helper</b> ที่มุมบนซ้ายของกล่อง</p>
+    </section>
+
+    <section id="read">
+      <h2>การอ่าน — ผู้ส่งเห็นว่าอ่านแล้วหรือไม่</h2>
+      <table class="perm"><tr><th>การกระทำ</th><th>eDoc บันทึกว่าอ่านแล้ว?</th></tr>
+        <tr><td>ดูรายละเอียดในช่องด้านขวา</td><td>ไม่</td></tr>
+        <tr><td>ดูย่อ (P) เปิดไฟล์แนบ พิมพ์ ค้นหา</td><td>ไม่</td></tr>
+        <tr><td>“เปิดใน eDoc” หรือ Enter</td><td>ใช่ — เหมือนเปิดจาก eDoc ตามปกติ</td></tr></table>
+      <p>eDoc ให้กด <b>ทราบ</b> ได้หลังเปิดไฟล์แนบครบในหน้า eDoc เอง การเปิดไฟล์จากตัวช่วยไม่นับ</p>
+    </section>
+
+    <section id="search">
+      <h2>ค้นหาและ Ctrl+K</h2>
+      <p>ช่องค้นหาเหนือรายการรับชื่อเรื่อง เลขที่หนังสือ ผู้ส่ง หรือรหัสอ้างอิง กด <kbd>/</kbd> เพื่อไปที่ช่องค้นหา <kbd>Esc</kbd> เพื่อล้าง</p>
+      <p>กด <kbd>Ctrl</kbd> <kbd>K</kbd> (Mac: <kbd>⌘</kbd> <kbd>K</kbd>) จากหน้าไหนก็ได้ใน eDoc เพื่อค้นหาเรื่องและคำสั่ง: <kbd>Enter</kbd> เปิดเรื่องใน eDoc · <kbd>Shift</kbd> <kbd>Enter</kbd> แสดงเรื่องในรายการ โดยไม่เปลี่ยนมุมมองที่คุณใช้อยู่</p>
+      <figure><img src="img/3-search.png" alt="ช่องค้นหา Ctrl+K" loading="lazy"></figure>
+      <div class="callout">วางรหัสอ้างอิงที่พิมพ์ผิดได้เลย — O แทน 0 หรือเลขไทยถูกแก้ให้เอง</div>
+    </section>
+
+    <section id="filters">
+      <h2>ตัวกรองและมุมมอง</h2>
+      <p>กด <b>ตัวกรอง</b> เพื่อเลือกตามการดำเนินการ การอ่าน สถานะ แฟ้ม วันที่ส่ง ความเร็ว และวัตถุประสงค์ ตัวกรองที่ใช้บ่อยกด 📌 เพื่อปักไว้เหนือรายการ และบันทึกชุดตัวกรองเป็นมุมมองได้</p>
+      <figure><img src="img/6-filters.png" alt="แผงตัวกรอง" loading="lazy"></figure>
+      <p>มุมมองมีสามแบบ: <b>รายการ</b> (แถวพร้อมช่องรายละเอียด) <b>บอร์ด</b> (คอลัมน์ตามสถานะ) และ <b>แบบละเอียด</b> (การ์ด) — ตัวช่วยจำมุมมองที่ใช้ล่าสุด</p>
+      <figure><img src="img/5-cards.png" alt="มุมมองแบบละเอียด" loading="lazy"></figure>
+    </section>
+
+    <section id="organise">
+      <h2>สถานะ แฟ้ม บันทึก และพักไว้</h2>
+      <p>ทั้งหมดนี้เป็นของคุณเอง เก็บในเครื่อง ไม่เปลี่ยนอะไรใน eDoc และไม่มีใครเห็น</p>
+      <ul>
+        <li><b>สถานะ</b> — กด <kbd>S</kbd> หรือเมนู ⋯ ของเรื่อง สร้างสถานะใหม่ด้วยชื่อและสี</li>
+        <li><b>แฟ้ม</b> — กด <kbd>F</kbd> หรือลากเรื่องไปวางที่แฟ้ม ติ๊กหลายเรื่องแล้วลากได้ทีเดียว มุมมองที่บันทึกไว้ตั้งให้ใส่แฟ้มอัตโนมัติได้ (⚡)</li>
+        <li><b>บันทึก</b> — จดข้อความสั้น ๆ ในช่องรายละเอียด</li>
+        <li><b>พักไว้</b> — ซ่อนเรื่องจนถึงพรุ่งนี้เช้า วันจันทร์หน้า หรือวันที่เลือก เรื่องจะกลับมาพร้อมป้าย ครบกำหนด</li>
+      </ul>
+      <figure><img src="img/2-board.png" alt="มุมมองบอร์ดตามสถานะ" loading="lazy"><figcaption>ลากเรื่องข้ามคอลัมน์เพื่อเปลี่ยนสถานะ</figcaption></figure>
+      <p>คลิกขวาที่แฟ้มหรือสถานะในแถวตัวกรองเพื่อเปลี่ยนชื่อ แก้สี หรือลบ</p>
+    </section>
+
+    <section id="more">
+      <h2>พิมพ์ ไฟล์แนบ และอื่น ๆ</h2>
+      <figure><img src="img/7-more.png" alt="เมนูเพิ่มเติม" loading="lazy"></figure>
+      <ul>
+        <li><b>พิมพ์</b> — รายละเอียดและเส้นทางเอกสารของเรื่องที่เลือก</li>
+        <li><b>ไฟล์แนบ (zip)</b> — ดาวน์โหลดทุกไฟล์ของเรื่องในครั้งเดียว</li>
+        <li><b>แจ้งเตือน</b> — ปิด / เฉพาะเรื่องด่วน / ทุกเรื่อง บอกแค่จำนวน</li>
+        <li><b>กล่องอื่นของคุณ</b> — จำนวนเรื่องรอในกล่องหน่วยงานที่คุณมีบทบาท</li>
+        <li><b>ข้อความตอบกลับ</b> — หน้าข้อความตอบกลับแสดงทันทีเช่นเดียวกับหนังสือเข้า</li>
+        <li><b>รวม eDoc v2</b> — แสดงหนังสือจากระบบเดิมในรายการเดียวกัน (⚙ เปิด–ปิด)</li>
+      </ul>
+    </section>
+
+    <section id="keys">
+      <h2>แป้นลัด</h2>
+      <div class="keys">
+        <div><span class="k"><kbd>/</kbd></span>ค้นหา (Esc ล้าง)</div>
+        <div><span class="k"><kbd>↑</kbd><kbd>↓</kbd></span>เรื่องก่อน / ถัดไป</div>
+        <div><span class="k"><kbd>Space</kbd></span>เลือกเรื่อง</div>
+        <div><span class="k"><kbd>S</kbd></span>ตั้งสถานะ</div>
+        <div><span class="k"><kbd>F</kbd></span>ใส่แฟ้ม</div>
+        <div><span class="k"><kbd>P</kbd></span>ดูย่อ</div>
+        <div><span class="k"><kbd>Enter</kbd></span>เปิดใน eDoc</div>
+        <div><span class="k"><kbd>Ctrl</kbd><kbd>K</kbd></span>ค้นหาทุกอย่าง</div>
+        <div><span class="k"><kbd>?</kbd></span>แป้นลัดและวิธีใช้</div>
+      </div>
+    </section>
+
+    <section id="fix">
+      <h2>วิธีแก้ที่พบบ่อย</h2>
+      <details class="qa"><summary>ไม่เห็นเรื่อง หรือปุ่มหายไป</summary><p>รีเฟรชหน้า (F5) หรือสลับบทบาทไปแล้วกลับมาหนึ่งครั้ง ระหว่างนั้นรายการในตัวช่วยยังใช้ได้</p></details>
+      <details class="qa"><summary>ลงนามแล้วแต่ยังรอดำเนินการ</summary><p>เปิดเรื่องแล้วกดปุ่มบันทึกหลังลงนาม ป้าย ⚠ สถานะไม่ตรง บอกว่าเรื่องไหนเป็นแบบนี้</p></details>
+      <details class="qa"><summary>เปิดเรื่องไม่ได้</summary><p>ช่อง <b>เปิดไม่ได้</b> รวมเรื่องที่ eDoc ไม่ยอมให้อ่าน คัดลอกรายการแจ้งปัญหา (มีแต่รหัสอ้างอิง) ไปแจ้งผู้ดูแล เมื่อแก้แล้วกด <b>ตรวจซ้ำ</b></p></details>
+      <details class="qa"><summary>กด ทราบ ไม่ได้</summary><p>เปิดไฟล์แนบทุกไฟล์ในหน้า eDoc ก่อน แล้วจึงกด ทราบ</p></details>
+      <details class="qa"><summary>ใน eDoc ไม่เห็นเรื่องที่ตัวช่วยเห็น</summary><p>eDoc เริ่มที่ตัวกรอง “ยังไม่ได้ดำเนินการ” ล้างตัวกรองของ eDoc ดู ตัวกรองของตัวช่วยแยกกัน</p></details>
+      <details class="qa"><summary>หน้าแสดงว่าตัวช่วยถูกอัปเดต ให้รีเฟรช</summary><p>เบราว์เซอร์เพิ่งอัปเดตตัวช่วย หน้าที่เปิดค้างไว้ยังใช้รุ่นเดิมอยู่ กดรีเฟรชหนึ่งครั้ง</p></details>
+    </section>
+
+    <section id="backup">
+      <h2>สำรองและลบข้อมูล</h2>
+      <p>เปิดแผงด้านข้าง (กดไอคอน eDoc Helper ที่แถบเครื่องมือ) → <b>ตั้งค่า</b></p>
+      <ul>
+        <li><b>สำรองแฟ้ม สถานะ และบันทึก</b> — <b>ส่งออก (JSON)</b> เก็บเป็นไฟล์ แล้ว <b>นำเข้า</b> ในเครื่องอื่น ข้อมูลไม่ซิงก์ข้ามเครื่องเอง</li>
+        <li><b>ล้างข้อมูลแคช</b> — ลบสำเนาหนังสือในเครื่องแล้วดึงใหม่ แฟ้มและสถานะไม่หาย</li>
+        <li><b>ลบแฟ้มและสถานะของฉัน</b> — รวมบันทึกทั้งหมด ย้อนกลับไม่ได้ ควรส่งออกไว้ก่อน</li>
+      </ul>
+      <p>การลบส่วนขยายออกจากเบราว์เซอร์ลบข้อมูลทั้งหมดด้วย</p>
+      <div class="callout">ข้อมูลเก็บในเบราว์เซอร์นี้เท่านั้น — ถ้าใช้เครื่องร่วมกัน ควรใช้ Chrome profile แยกต่อคน</div>
+    </section>
+
+    <section id="changes">
+      <h2>อัปเดต</h2>
+      <p><b>รุ่นแรกบน Chrome Web Store</b> — หนังสือเข้าและข้อความตอบกลับแสดงทันที ดึงเฉพาะเรื่องใหม่ Ctrl+K เปิดเรื่องได้ทันที ตั้งค่าเริ่มต้นพร้อมภาพและทัวร์ แป้นลัดแบบแผ่นสรุป</p>
+    </section>
+  </article>
+</div>
+
+<footer><div class="wrap">
+  <span>eDoc Helper</span><a href="index.html">หน้าแรก</a><a href="privacy.html">ความเป็นส่วนตัว</a>
+  <span class="sp"></span><span>ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC</span>
+</div></footer>
+
+<script>
+// Highlight the section in view; filter the table of contents by what is typed.
+const links = [...document.querySelectorAll('.side a')]
+const byId = new Map(links.map(a => [a.hash.slice(1), a]))
+const io = new IntersectionObserver(es => {
+  for (const e of es) if (e.isIntersecting) { links.forEach(a => a.classList.remove('on')); const a = byId.get(e.target.id); a?.classList.add('on'); a?.scrollIntoView({ block: 'nearest', inline: 'nearest' }) }
+}, { rootMargin: '-80px 0px -70% 0px' })
+document.querySelectorAll('.doc section').forEach(s => io.observe(s))
+document.querySelector('.side .search').addEventListener('input', e => {
+  const q = e.target.value.trim()
+  for (const a of links) {
+    const sec = document.getElementById(a.hash.slice(1))
+    a.hidden = !!q && !(a.textContent + sec.textContent).includes(q)
+  }
+})
+</script>
+</body>
+</html>

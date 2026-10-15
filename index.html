@@ -3,70 +3,126 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>eDoc Helper — ติดตั้งและนโยบายความเป็นส่วนตัว</title>
-<meta name="description" content="eDoc Helper: ผู้ช่วยอ่านอย่างเดียวสำหรับ CMU e-Document v3 — วิธีติดตั้ง และนโยบายความเป็นส่วนตัว">
+<title>eDoc Helper — ใช้ CMU e-Document ได้เร็วขึ้น เป็นระเบียบขึ้น</title>
+<meta name="description" content="ผู้ช่วยอ่านอย่างเดียวสำหรับ CMU e-Document v3: หนังสือเข้าแสดงทันที ค้นหา กรอง จัดแฟ้ม และติดตามงาน — ข้อมูลอยู่ในเครื่องของคุณ">
+<link rel="icon" href="img/icon.svg" type="image/svg+xml"><link rel="apple-touch-icon" href="img/icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--ink:#111827;--muted:#4b5563;--line:#e5e7eb;--brand:#173e94;--bg:#f8fafc;--card:#fff}
-@media (prefers-color-scheme:dark){:root{--ink:#f3f4f6;--muted:#9ca3af;--line:#374151;--brand:#93b4ff;--bg:#0b1220;--card:#111827}}
-*{box-sizing:border-box}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 Sarabun,system-ui,sans-serif}
-main{max-width:760px;margin:0 auto;padding:40px 16px 64px}
-h1{font-size:30px;margin:0 0 4px}h2{font-size:21px;margin:40px 0 8px}h3{font-size:17px;margin:20px 0 4px}
-.lead{color:var(--muted);margin:0 0 24px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:20px 22px}
-.btn{display:inline-block;background:var(--brand);color:#fff;text-decoration:none;font-weight:600;padding:10px 20px;border-radius:10px}
-@media (prefers-color-scheme:dark){.btn{color:#0b1220}}
-ol,ul{padding-left:22px}li{margin:4px 0}
-.muted{color:var(--muted);font-size:14px}
-nav a{color:var(--brand);margin-right:16px}
-</style>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="index.html"><img src="img/icon.svg" alt="">eDoc Helper</a>
+  <nav class="menu"><a href="#features">ฟีเจอร์</a><a href="docs.html">คู่มือ</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="#faq">คำถามพบบ่อย</a></nav>
+  <a class="btn sm" href="#install">ติดตั้ง</a>
+</div></header>
+
 <main>
-  <h1>eDoc Helper</h1>
-  <p class="lead">ผู้ช่วยอ่านอย่างเดียวสำหรับ CMU e-Document v3 — ค้นหา กรอง จัดแฟ้ม และติดตามหนังสือเข้าได้เร็วขึ้น ข้อมูลอยู่ในเครื่องของคุณ</p>
-  <nav><a href="#install">ติดตั้ง</a><a href="#move">ย้ายจากรุ่นทดสอบ</a><a href="#privacy">ความเป็นส่วนตัว</a></nav>
-
-  <h2 id="install">ติดตั้ง</h2>
-  <div class="card">
-    <p><a class="btn" id="store" href="#">ติดตั้งจาก Chrome Web Store</a></p>
-    <ol>
-      <li>เปิดลิงก์ด้านบนใน Google Chrome หรือ Microsoft Edge แล้วกด <b>เพิ่มลงใน Chrome</b> (Edge: กด <b>อนุญาตส่วนขยายจากร้านค้าอื่น</b> ก่อนหนึ่งครั้ง)</li>
-      <li>เปิด <a href="https://edoc.cmu.ac.th/v3">eDoc</a> และเข้าสู่ระบบตามปกติ — ตัวช่วยจะแสดงในหน้าหนังสือเข้า และพาตั้งค่าเริ่มต้นสั้น ๆ</li>
-    </ol>
-    <p class="muted">รุ่นใหม่อัปเดตให้อัตโนมัติ ไม่ต้องทำอะไร</p>
+  <div class="wrap hero">
+    <span class="eyebrow">สำหรับบุคลากรมหาวิทยาลัยเชียงใหม่ที่ใช้ eDoc v3</span>
+    <h1>ใช้ eDoc ได้เร็วขึ้น<br>เป็นระเบียบขึ้น</h1>
+    <p class="lead">eDoc Helper เป็นผู้ช่วยบนหน้า eDoc เดิมของคุณ — หนังสือเข้าแสดงทันที ค้นหาได้ทุกเรื่อง จัดสถานะและแฟ้มของคุณเอง โดยอ่านอย่างเดียว และเก็บข้อมูลไว้ในเครื่องของคุณ</p>
+    <div class="ctas"><a class="btn" id="store" href="#install">เพิ่มลงใน Chrome — ฟรี</a><a class="btn ghost" href="docs.html">อ่านคู่มือ</a></div>
+    <p class="note">ใช้ได้กับ Google Chrome และ Microsoft Edge · อัปเดตให้อัตโนมัติ</p>
+    <div class="frame"><div class="bar"><i></i><i></i><i></i><span>edoc.cmu.ac.th/v3/inbox/individual</span></div><video class="clip" src="clips/inbox.mp4" poster="clips/inbox.jpg" autoplay muted loop playsinline preload="metadata" aria-label="หน้าหนังสือเข้าพร้อม eDoc Helper: คลิกเรื่องเพื่อดูรายละเอียดและเส้นทางเอกสาร" width="1920" height="1200"></video></div>
   </div>
 
-  <h2 id="move">ย้ายจากรุ่นทดสอบ (Load unpacked)</h2>
-  <div class="card">
-    <ol>
-      <li>ในรุ่นเดิม: กดไอคอน eDoc Helper → ⚙ → <b>สำรองแฟ้ม สถานะ และบันทึก</b> → <b>ส่งออก</b> (ได้ไฟล์ .json)</li>
-      <li>ลบรุ่นเดิมที่ chrome://extensions</li>
-      <li>ติดตั้งจากลิงก์ด้านบน แล้วกด ⚙ → <b>นำเข้า</b> ไฟล์ .json นั้น</li>
-    </ol>
-    <p class="muted">รุ่นจาก Web Store เป็นส่วนขยายคนละตัวกับรุ่นทดสอบ ข้อมูลในเครื่องจึงไม่ย้ายตามเอง</p>
+  <div class="wrap pillars">
+    <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></div><h3>เร็ว</h3><p>หนังสือเข้าแสดงจากข้อมูลในเครื่องภายในเสี้ยววินาที ไม่ต้องรอ eDoc โหลดทั้งหน้า และค้นหาได้จากทุกหน้าด้วย <kbd>Ctrl</kbd> <kbd>K</kbd></p></div>
+    <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 9h18M9 9v11"/></svg></div><h3>เป็นระเบียบ</h3><p>ตั้งสถานะ ใส่แฟ้ม จดบันทึก และพักเรื่องไว้ก่อน ดูเป็นรายการ บอร์ด หรือการ์ด — ของคุณเอง ไม่กระทบคนอื่น</p></div>
+    <div class="pillar"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="5" y="11" width="14" height="10" rx="2"/><path d="M8 11V7a4 4 0 0 1 8 0v4"/></svg></div><h3>ปลอดภัยและเป็นส่วนตัว</h3><p>อ่านอย่างเดียว ไม่แก้ไข ไม่ส่ง ไม่กดอะไรใน eDoc แทนคุณ ไม่มีเซิร์ฟเวอร์ของส่วนขยาย ข้อมูลอยู่ในเบราว์เซอร์ของคุณ</p></div>
   </div>
 
-  <h2 id="privacy">นโยบายความเป็นส่วนตัว</h2>
-  <div class="card">
-    <h3>ส่วนขยายทำอะไร</h3>
-    <p>eDoc Helper อ่านหนังสือในกล่อง eDoc ของคุณ (edoc.cmu.ac.th) โดยใช้การเข้าสู่ระบบ eDoc ของคุณเอง เพื่อแสดง ค้นหา กรอง และจัดระเบียบให้ใช้งานง่ายขึ้น <b>อ่านอย่างเดียว</b> — ไม่แก้ไข ไม่ส่ง และไม่กดปุ่มใด ๆ ใน eDoc แทนคุณ</p>
-    <h3>ข้อมูลที่ใช้ และเก็บที่ไหน</h3>
-    <ul>
-      <li><b>รายการและรายละเอียดหนังสือของคุณ</b> จาก eDoc — เก็บสำเนาไว้ในเบราว์เซอร์ของคุณ (IndexedDB) เพื่อแสดงได้ทันที แยกตามผู้ใช้ eDoc</li>
-      <li><b>สถานะ แฟ้ม บันทึก และการตั้งค่าของคุณ</b> — เก็บในเบราว์เซอร์ของคุณเท่านั้น</li>
-      <li><b>การเข้าสู่ระบบ eDoc</b> — ใช้จากคำขอของหน้า eDoc เอง เก็บไว้ในหน่วยความจำขณะใช้งานเท่านั้น ไม่บันทึกลงเครื่อง</li>
-    </ul>
-    <h3>ข้อมูลไปที่ไหน</h3>
-    <p>ไม่มีเซิร์ฟเวอร์ของส่วนขยาย ข้อมูลไม่ถูกส่งไปที่ใดนอกจากระบบของ eDoc เอง (edoc.cmu.ac.th, api.cmu.ac.th และที่เก็บไฟล์แนบของ eDoc) ไม่มีการขาย แบ่งปัน วิเคราะห์ หรือติดตามการใช้งาน</p>
-    <h3>ลบข้อมูล</h3>
-    <p>กด ⚙ ในแผงด้านข้าง → <b>ล้างข้อมูล</b> หรือลบส่วนขยายออก — ข้อมูลทั้งหมดในเครื่องจะถูกลบ</p>
-    <h3>ใช้เครื่องร่วมกัน</h3>
-    <p>ข้อมูลแยกตามผู้ใช้ eDoc แต่ไม่ได้เข้ารหัส ควรใช้ Chrome profile หรือบัญชี Windows แยกต่อคน</p>
-    <p class="muted">ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC · ปรับปรุงล่าสุด 15 ตุลาคม 2569</p>
-  </div>
+  <section class="band soft" id="features"><div class="wrap">
+    <div class="sec-h"><h2>ทำงานกับ eDoc ให้จบเร็วขึ้น</h2><p>ทุกอย่างอยู่บนหน้า eDoc เดิม เปิด–ปิดได้ด้วยสวิตช์เดียว</p></div>
+
+    <div class="feature">
+      <div class="txt"><div class="tag">หนังสือเข้า</div><h3>เห็นทุกเรื่องทันที แยกตามสิ่งที่ต้องทำ</h3>
+        <p>แท็บ <b>พิจารณา · ส่งต่อ · ทั้งหมด</b> บอกจำนวนเรื่องที่ค้าง ป้ายสีบอกความด่วนและจำนวนวันที่รอ คลิกเรื่องเพื่อดูรายละเอียดและเส้นทางเอกสารทางขวา</p>
+        <ul><li>ดูรายละเอียดโดยไม่ทำให้ eDoc บันทึกว่าอ่านแล้ว</li><li>แสดงทันทีจากข้อมูลในเครื่อง แล้วอัปเดตจาก eDoc ให้เอง</li><li>“เปิดใน eDoc” ไปยังหน้าที่ดำเนินการได้จริง</li></ul>
+        <a class="more" href="docs.html#inbox">อ่านเพิ่มเติม →</a></div>
+      <div class="pic"><img src="img/1-list.png" alt="รายการหนังสือเข้าและช่องรายละเอียด" loading="lazy"></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="txt"><div class="tag">ค้นหา</div><h3>หาเรื่องเจอในไม่กี่ตัวอักษร</h3>
+        <p>พิมพ์ชื่อเรื่อง เลขที่หนังสือ ผู้ส่ง หรือวางรหัสอ้างอิง — หรือกด <kbd>Ctrl</kbd> <kbd>K</kbd> จากหน้าไหนก็ได้ใน eDoc เพื่อค้นหาเรื่องและคำสั่ง</p>
+        <ul><li>รหัสพิมพ์ผิด (O แทน 0, เลขไทย) แก้ให้เอง</li><li>Enter เปิดเรื่องใน eDoc · Shift+Enter ดูในรายการ</li></ul>
+        <a class="more" href="docs.html#search">อ่านเพิ่มเติม →</a></div>
+      <div class="pic"><video class="clip" src="clips/search.mp4" poster="clips/search.jpg" autoplay muted loop playsinline preload="metadata" aria-label="กด Ctrl+K พิมพ์คำค้น แล้วไปที่เรื่อง" width="1920" height="1200"></video></div>
+    </div>
+
+    <div class="feature">
+      <div class="txt"><div class="tag">ตัวกรองและมุมมอง</div><h3>กรองแบบที่คุณใช้จริง แล้วปักไว้</h3>
+        <p>กรองตามการดำเนินการ การอ่าน สถานะของคุณ แฟ้ม วันที่ส่ง ความเร็ว และวัตถุประสงค์ — กด 📌 เพื่อปักตัวกรองที่ใช้บ่อยไว้เหนือรายการ</p>
+        <ul><li>มุมมองรายการ บอร์ด หรือแบบละเอียด จำไว้ให้ทุกครั้ง</li><li>ปุ่มด่วน: รอฉัน · ด่วนยังไม่อ่าน · ค้างเกิน 3 วัน</li></ul>
+        <a class="more" href="docs.html#filters">อ่านเพิ่มเติม →</a></div>
+      <div class="pic"><video class="clip" src="clips/filters.mp4" poster="clips/filters.jpg" autoplay muted loop playsinline preload="metadata" aria-label="กดตัวกรองด่วนยังไม่อ่าน แล้วเปิดแผงตัวกรอง" width="1920" height="1200"></video></div>
+    </div>
+
+    <div class="feature flip">
+      <div class="txt"><div class="tag">จัดงานของคุณ</div><h3>สถานะ แฟ้ม บันทึก และพักไว้</h3>
+        <p>ติดสถานะที่ตั้งเอง (เช่น รอเอกสารเพิ่ม) ลากเรื่องใส่แฟ้ม จดบันทึกที่เห็นเฉพาะคุณ และพักเรื่องที่ยังทำไม่ได้ไว้จนถึงวันที่ต้องการ</p>
+        <ul><li>มุมมองบอร์ดแยกคอลัมน์ตามสถานะ ลากย้ายได้</li><li>สำรองและนำเข้าไปเครื่องอื่นได้</li></ul>
+        <a class="more" href="docs.html#organise">อ่านเพิ่มเติม →</a></div>
+      <div class="pic"><video class="clip" src="clips/board.mp4" poster="clips/board.jpg" autoplay muted loop playsinline preload="metadata" aria-label="ลากเรื่องข้ามคอลัมน์ในมุมมองบอร์ดเพื่อเปลี่ยนสถานะ" width="1920" height="1200"></video></div>
+    </div>
+
+    <div class="grid3">
+      <div class="mini"><h4>พิมพ์และไฟล์แนบ (zip)</h4><p>พิมพ์รายละเอียดและเส้นทางเอกสาร หรือดาวน์โหลดไฟล์แนบทุกไฟล์เป็น zip ในครั้งเดียว</p></div>
+      <div class="mini"><h4>แจ้งเตือนหนังสือใหม่</h4><p>เลือกได้: ปิด เฉพาะเรื่องด่วน หรือทุกเรื่อง — บอกแค่จำนวน ไม่แสดงชื่อเรื่อง</p></div>
+      <div class="mini"><h4>กล่องอื่นของคุณ</h4><p>เห็นว่ามีเรื่องรอในกล่องหน่วยงานที่คุณมีบทบาทกี่เรื่อง โดยไม่ต้องสลับไปดูทีละกล่อง</p></div>
+      <div class="mini"><h4>ข้อความตอบกลับ</h4><p>รายการข้อความตอบกลับแสดงทันทีเหมือนหนังสือเข้า ค้นหาและจัดสถานะได้</p></div>
+      <div class="mini"><h4>เรื่องที่เปิดไม่ได้</h4><p>รวมเรื่องที่ eDoc ไม่ยอมให้อ่านไว้ที่เดียว คัดลอกรายการแจ้งปัญหา (มีแต่รหัส) ได้ทันที</p></div>
+      <div class="mini"><h4>รวม eDoc v2</h4><p>เลือกแสดงหนังสือจากระบบเดิมไว้ในรายการเดียวกัน มีป้าย v2 กำกับ</p></div>
+    </div>
+  </div></section>
+
+  <section class="band" id="install"><div class="wrap">
+    <div class="sec-h"><h2>เริ่มใช้ได้ใน 1 นาที</h2><p>ไม่ต้องสมัคร ไม่ต้องตั้งค่าเซิร์ฟเวอร์ ใช้การเข้าสู่ระบบ eDoc เดิมของคุณ</p></div>
+    <div class="steps">
+      <div class="step"><h4>ติดตั้ง</h4><p>กด <b>เพิ่มลงใน Chrome</b> จาก Chrome Web Store (Edge: อนุญาตส่วนขยายจากร้านค้าอื่นก่อนหนึ่งครั้ง)</p></div>
+      <div class="step"><h4>เข้า eDoc ตามปกติ</h4><p>เปิด edoc.cmu.ac.th และเข้าสู่ระบบ — ตัวช่วยแสดงบนหน้าหนังสือเข้าเอง</p></div>
+      <div class="step"><h4>ตั้งค่าเริ่มต้น</h4><p>เลือกมุมมองและการแจ้งเตือนใน 4 ขั้นสั้น ๆ แล้วดูทัวร์ 1 นาทีบนหน้าจริงของคุณ</p></div>
+    </div>
+    <p style="text-align:center;margin-top:32px"><a class="btn" href="#">เพิ่มลงใน Chrome — ฟรี</a></p>
+  </div></section>
+
+  <section class="band soft"><div class="wrap">
+    <div class="sec-h"><h2>ออกแบบให้ไว้ใจได้</h2><p>ใช้กับเอกสารราชการ จึงตั้งใจให้ทำเท่าที่จำเป็น — <a href="privacy.html">อ่านนโยบายความเป็นส่วนตัว</a></p></div>
+    <div class="trust">
+      <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>อ่านอย่างเดียว</h4><p>ใช้คำสั่งอ่านของ eDoc ที่กำหนดไว้ 10 ชุด ไม่มีคำสั่งเขียน ไม่ส่ง ไม่อนุมัติ ไม่กดปุ่มใด ๆ แทนคุณ</p></div></div>
+      <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>ข้อมูลอยู่ในเครื่องคุณ</h4><p>ไม่มีเซิร์ฟเวอร์ของส่วนขยาย ไม่มีการติดตามการใช้งาน ข้อมูลไม่ถูกส่งไปที่ใดนอกจาก eDoc เอง</p></div></div>
+      <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>การเข้าสู่ระบบไม่ถูกเก็บ</h4><p>ใช้การเข้าสู่ระบบของหน้า eDoc เองระหว่างใช้งาน เก็บในหน่วยความจำเท่านั้น ไม่บันทึกลงเครื่อง</p></div></div>
+      <div class="mini"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M20 6 9 17l-5-5"/></svg><div><h4>แยกตามผู้ใช้</h4><p>ใช้เครื่องร่วมกันได้ แต่ละคนเห็นเฉพาะข้อมูลของตัวเอง และลบข้อมูลของตัวเองได้จากหน้าตั้งค่า</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="band" id="faq"><div class="wrap faq">
+    <div class="sec-h"><h2>คำถามพบบ่อย</h2></div>
+    <details class="qa"><summary>เป็นของมหาวิทยาลัยหรือไม่</summary><p>ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC เป็นเครื่องมือช่วยใช้งานที่ทำงานบนหน้า eDoc ของคุณเท่านั้น</p></details>
+    <details class="qa"><summary>ผู้ส่งจะเห็นว่าฉันอ่านแล้วหรือไม่</summary><p>การดูรายละเอียด ดูย่อ ค้นหา พิมพ์ และเปิดไฟล์จากตัวช่วยไม่ทำให้ eDoc บันทึกว่าอ่านแล้ว จะบันทึกเมื่อคุณกด “เปิดใน eDoc” เหมือนเปิดจาก eDoc ตามปกติ</p></details>
+    <details class="qa"><summary>ใช้กับ Microsoft Edge ได้ไหม</summary><p>ได้ ติดตั้งจาก Chrome Web Store โดยกด “อนุญาตส่วนขยายจากร้านค้าอื่น” ใน Edge หนึ่งครั้ง</p></details>
+    <details class="qa"><summary>ถ้า eDoc ช้าหรือปิดปรับปรุง ใช้ได้ไหม</summary><p>รายการจากข้อมูลในเครื่องยังเปิดดูและค้นหาได้ ตัวช่วยจะบอกว่าข้อมูลอัปเดตล่าสุดเมื่อไร และลองใหม่เองเมื่อ eDoc กลับมา</p></details>
+    <details class="qa"><summary>ปิดตัวช่วยชั่วคราวได้ไหม</summary><p>ได้ กดสวิตช์ eDoc Helper มุมบนซ้ายของกล่อง หน้าจะกลับเป็น eDoc เดิมทันที กดอีกครั้งเพื่อเปิด</p></details>
+    <details class="qa"><summary>ข้อมูลของฉันหายได้ไหม</summary><p>ข้อมูลอยู่ในเบราว์เซอร์ หากลบส่วนขยายหรือล้างข้อมูลเบราว์เซอร์จะหายไป แนะนำส่งออกสำรองไว้เป็นครั้งคราว (แผงด้านข้าง → ตั้งค่า → สำรองแฟ้ม สถานะ และบันทึก)</p></details>
+  </div></section>
+
+  <section class="cta-band soft" style="background:var(--soft)"><div class="wrap">
+    <h2>ลองใช้กับกล่องหนังสือของคุณวันนี้</h2><p>ฟรี ใช้การเข้าสู่ระบบ eDoc เดิม ปิดได้ทุกเมื่อ</p>
+    <a class="btn" href="#">เพิ่มลงใน Chrome — ฟรี</a>
+  </div></section>
 </main>
+
+<footer><div class="wrap">
+  <span>eDoc Helper</span><a href="docs.html">คู่มือ</a><a href="privacy.html">ความเป็นส่วนตัว</a><a href="docs.html#changes">อัปเดต</a>
+  <span class="sp"></span><span>ไม่ใช่ผลิตภัณฑ์ทางการของมหาวิทยาลัยเชียงใหม่ / ITSC</span>
+</div></footer>
+<script>
+// Clips play only while on screen; with reduced motion they stay on their poster frame.
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches
+const io = new IntersectionObserver(es => { for (const e of es) e.isIntersecting && !still ? e.target.play().catch(() => {}) : e.target.pause() })
+document.querySelectorAll('video.clip').forEach(v => { if (still) v.removeAttribute('autoplay'); io.observe(v) })
+</script>
 </body>
 </html>
