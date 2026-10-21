@@ -119,6 +119,11 @@ footer .sp{flex:1}
 .doc li{margin:5px 0}
 .doc figure{margin:16px 0 8px;border-radius:12px;overflow:hidden;border:1px solid var(--line)}
 .doc figcaption{font-size:14px;color:var(--muted);padding:8px 14px;background:var(--soft)}
+/* มีอะไรใหม่: each release's pictures, at their own size (never wider than the column) on a soft ground */
+.doc figure.chg{background:var(--soft);display:block}
+.doc .note{font-size:14px;color:var(--muted);margin:-4px 0 8px}
+.doc .rel+.rel{margin-top:28px;padding-top:20px;border-top:1px dashed var(--line)}
+.doc figure.chg img{display:block;max-width:100%;height:auto;margin:0 auto;background:#fff}
 .callout{border-radius:10px;padding:12px 16px;margin:14px 0;background:var(--brand-soft);color:var(--ink);font-size:15px}
 .callout.warn{background:color-mix(in srgb,var(--warn) 12%,var(--bg))}
 kbd{display:inline-block;min-width:22px;text-align:center;font:600 13px/20px ui-monospace,Menlo,monospace;padding:1px 7px;border-radius:6px;border:1px solid var(--line);border-bottom-width:2px;background:var(--soft);color:var(--ink)}
